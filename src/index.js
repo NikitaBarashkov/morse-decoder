@@ -38,9 +38,8 @@ const MORSE_TABLE = {
 };
 
 function decode(expr) {
-    // write your solution here
-
-    const firstArr = [];
+  // write your solution here
+  const firstArr = [];
   
   for(let i = 0; i < expr.length; i++){
     firstArr.push(expr[i] + expr[i + 1]);
@@ -55,8 +54,6 @@ function decode(expr) {
     i += 5;
   }
 
-  // let someArr;
-
   arrForFive.forEach(arr => {
     for(let i = 0; i < arr.length; i++){
       if(arr[i] === '00'){
@@ -68,16 +65,12 @@ function decode(expr) {
         arr.splice(i, 1, '-')
       } 
     }
-    // console.log(arr.join())
-    // someArr += arr.join('')
-    // console.log(someArr)
   })
 
 let arrayStr = []
 
 for(let i = 0; i < arrForFive.length; i++){
   arrayStr.push(arrForFive[i].join(''));
-//   console.log(arrayStr[i])
 }
 
 const answer = []
